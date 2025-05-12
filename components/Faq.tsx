@@ -7,12 +7,14 @@ import {
 } from "@/components/ui/accordion";
 import { MailIcon, ArrowRightIcon } from "lucide-react";
 import { faqItems } from "@/constant";
+import Button from "./Button";
 
 const FAQSection: React.FC = () => {
   // Dummy FAQ data
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-16 h-screen">
+
       {/* Left Column - Contact Info */}
       <div className="flex flex-col space-y-6 order-2 lg:order-1">
         <div className="bg-white p-8 rounded-lg">
