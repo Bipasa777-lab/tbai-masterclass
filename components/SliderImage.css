@@ -1,9 +1,7 @@
 .slider-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .slider-row {
@@ -14,17 +12,17 @@
 
 .slider-row img {
   width: 150px;
-  height: 100px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .slider-row-top {
-  animation: scroll-left 10s linear infinite;
+  animation: scroll-left 15s linear infinite;
 }
 
 .slider-row-bottom {
-  animation: scroll-right 10s linear infinite;
+  animation: scroll-right 15s linear infinite;
 }
 
 @keyframes scroll-left {
