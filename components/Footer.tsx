@@ -1,156 +1,135 @@
-// components/Footer.tsx
 import React from 'react';
-import { 
-  Github, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
-  Mail 
-} from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { AvatarCircles } from "@/components/magicui/avatar-circles";
+import {
+  Github,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  GraduationCap,
+  Star,
+} from 'lucide-react';
 
 const dummyAvatars = [
   {
-    imageUrl: "https://avatar.vercel.sh/user1",
+    imageUrl: "/assets/avatars/avatar1.svg", // Replace with your image path
     profileUrl: "https://example.com/profile/user1",
   },
   {
-    imageUrl: "https://avatar.vercel.sh/user2",
+    imageUrl: "/assets/avatars/avatar2.svg", // Replace with your image path
     profileUrl: "https://example.com/profile/user2",
   },
   {
-    imageUrl: "https://avatar.vercel.sh/user3",
+    imageUrl: "/assets/avatars/avatar3.svg", // Replace with your image path
     profileUrl: "https://example.com/profile/user3",
   },
   {
-    imageUrl: "https://avatar.vercel.sh/user4",
+    imageUrl: "/assets/avatars/avatar4.jpg", // Replace with your image path
     profileUrl: "https://example.com/profile/user4",
   },
   {
-    imageUrl: "https://avatar.vercel.sh/user5",
+    imageUrl: "/assets/avatars/avatar5.jpg", // Replace with your image path
     profileUrl: "https://example.com/profile/user5",
   },
-  {
-    imageUrl: "https://avatar.vercel.sh/user6",
-    profileUrl: "https://example.com/profile/user6",
-  },
-  {
-    imageUrl: "https://avatar.vercel.sh/user7",
-    profileUrl: "https://example.com/profile/user7",
-  },
 ];
-
 
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-          {/* Company Info Section - Takes 2/5 of the space on large screens */}
-          <div className="lg:col-span-5">
-            <AvatarCircles numPeople={99} avatarUrls={dummyAvatars.slice(0, 5)}/>
-            <p className="text-gray-300">
-              123 Tech Street, Digital City<br />
-              contact@companyname.com<br />
-              +1 (555) 123-4567
-            </p>
+          {/* Left Side with Educore Info */}
+          <div className="lg:col-span-5 space-y-4">
+            {/* Avatar Group and Rating */}
+            <div className="flex items-center space-x-4">
+              <div className="flex -space-x-3">
+                {dummyAvatars.slice(0, 3).map((avatar, idx) => (
+                  <Image
+                    key={idx}
+                    src={avatar.imageUrl}
+                    alt={`user-${idx}`}
+                    width={40}
+                    height={40}
+                    className="rounded-full border-2 border-black"
+                  />
+                ))}
+                <div className="flex items-center justify-center w-10 h-10 bg-white text-black text-sm font-semibold rounded-full border-2 border-black">
+                  4k+
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-2">
+                {Array.from({ length: 5 }).map((_, idx) => (
+                  <Star key={idx} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                ))}
+                <span className="text-sm text-gray-400">Join 4000+ Students</span>
+              </div>
+            </div>
+
+            {/* Educore Info */}
+            <div className="space-y-1">
+              <div className="flex items-center text-2xl font-bold text-white">
+                <GraduationCap className="w-6 h-6 mr-2" />
+                Educore
+              </div>
+              <p className="text-gray-300 text-sm">
+                Here’s everything you need to know before you start your journey with Educore.
+              </p>
+              <p className="text-white font-medium">Instructor</p>
+            </div>
           </div>
 
-          {/* Quick Links Section */}
+          {/* Quick Links */}
           <div className="lg:col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio" className="text-gray-300 hover:text-white transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
+              <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-white">About</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
+              <li><Link href="/portfolio" className="text-gray-300 hover:text-white">Portfolio</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Pages Section */}
+          {/* Pages */}
           <div className="lg:col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Pages</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/sitemap" className="text-gray-300 hover:text-white transition-colors">
-                  Sitemap
-                </Link>
-              </li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link href="/faq" className="text-gray-300 hover:text-white">FAQ</Link></li>
+              <li><Link href="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
+              <li><Link href="/sitemap" className="text-gray-300 hover:text-white">Sitemap</Link></li>
             </ul>
           </div>
 
-          {/* Social Section */}
+          {/* Social Links */}
           <div className="lg:col-span-3 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex flex-col space-y-3">
-              <Link href="https://github.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <Github className="w-5 h-5 mr-2" />
-                <span>GitHub</span>
+              <Link href="https://github.com" className="flex items-center text-gray-300 hover:text-white">
+                <Github className="w-5 h-5 mr-2" /> GitHub
               </Link>
-              <Link href="https://twitter.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5 mr-2" />
-                <span>Twitter</span>
+              <Link href="https://twitter.com" className="flex items-center text-gray-300 hover:text-white">
+                <Twitter className="w-5 h-5 mr-2" /> Twitter
               </Link>
-              <Link href="https://instagram.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <Instagram className="w-5 h-5 mr-2" />
-                <span>Instagram</span>
+              <Link href="https://instagram.com" className="flex items-center text-gray-300 hover:text-white">
+                <Instagram className="w-5 h-5 mr-2" /> Instagram
               </Link>
-              <Link href="https://linkedin.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5 mr-2" />
-                <span>LinkedIn</span>
+              <Link href="https://linkedin.com" className="flex items-center text-gray-300 hover:text-white">
+                <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
               </Link>
-              <Link href="mailto:contact@companyname.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <Mail className="w-5 h-5 mr-2" />
-                <span>Email Us</span>
+              <Link href="mailto:contact@companyname.com" className="flex items-center text-gray-300 hover:text-white">
+                <Mail className="w-5 h-5 mr-2" /> Email Us
               </Link>
             </div>
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Company Name. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} techno billion ai. All rights reserved.</p>
         </div>
       </div>
     </footer>

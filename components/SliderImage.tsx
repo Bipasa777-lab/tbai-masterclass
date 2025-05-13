@@ -1,3 +1,6 @@
+import React from 'react';
+import './SliderImage.css'; // Import the CSS file for animations
+
 import { cn } from "@/lib/utils";
 import { Marquee } from "./magicui/marquee";
 
@@ -59,21 +62,104 @@ const ReviewCard = ({ img }: { img: string }) => {
     </div>
   );
 };
-export function SliderImage() {
+
+export const SliderImage = () => {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} img={review.img} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} img={review.img} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-    </div>
+    <div className="slider-container">
+      <div className="slider-row slider-row-top">
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+      </div>
+      <div className="slider-row slider-row-bottom">
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+        <img src="/assets/image 1.svg" alt="Image 1" />
+        <img src="/assets/image 2.svg" alt="Image 2" />
+        <img src="/assets/image 3.svg" alt="Image 3" />
+        <img src="/assets/image. 4.svg" alt="Image 4" />
+        <img src="/assets/image 5.svg" alt="Image 5" />
+      </div>
+      </div>
   );
 }
