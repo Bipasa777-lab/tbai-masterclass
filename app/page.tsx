@@ -3,6 +3,7 @@ import Community from "@/components/Community";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MemberIntro from "@/components/MemberIntro";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,7 @@ export default function Home() {
       <Community />
       <Faq />
       <Cta />
+      <Footer/>
     </main>
   );
 }

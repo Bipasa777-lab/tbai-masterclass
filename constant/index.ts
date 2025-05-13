@@ -1,3 +1,6 @@
+import { HiOutlineHome, HiOutlineTrendingUp, HiOutlineGlobeAlt, HiOutlineLightBulb, HiOutlineBriefcase, HiOutlineSparkles } from 'react-icons/hi'; // Icons from Heroicons
+
+
 export const faqItems = [
     {
       question: "What technologies do you specialize in?",
@@ -19,4 +22,55 @@ export const faqItems = [
       question: "Can you work with our existing tech stack?",
       answer: "Absolutely! We're experienced in integrating with various tech stacks and can adapt to your existing infrastructure. During our initial assessment, we'll evaluate your current setup and recommend the most efficient approach for integration."
     }
+  ];
+
+
+    export const modules = [
+      {
+        title: 'Module 1: Foundations & GPT-4o Essentials',
+        subtitle: '4 weeks • 20 Resources • 6 Projects',
+      },
+      {
+        title: 'Module 2: AI in Everyday Life',
+        subtitle: '3 weeks • 8 Resources • 2 Projects',
+      },
+      {
+        title: 'Module 3: AI Ethics & Creativity',
+        subtitle: '5 weeks • 12 Resources • 4 Projects',
+      },
+      {
+        title: 'Module 4: Future Trends & Final Project',
+        subtitle: '6 weeks • 15 Resources • 5 Projects',
+      },
+    ];
+  
+    export const dummyAvatars = [
+    {
+      imageUrl: "https://avatar.vercel.sh/user1",
+      profileUrl: "https://example.com/profile/user1",
+    },
+    {
+      imageUrl: "https://avatar.vercel.sh/user2",
+      profileUrl: "https://example.com/profile/user2",
+    },
+    {
+      imageUrl: "https://avatar.vercel.sh/user3",
+      profileUrl: "https://example.com/profile/user3",
+    },
+    {
+      imageUrl: "https://avatar.vercel.sh/user4",
+      profileUrl: "https://example.com/profile/user4",
+    },
+    {
+      imageUrl: "https://avatar.vercel.sh/user5",
+      profileUrl: "https://example.com/profile/user5",
+    },
+    {
+      imageUrl: "https://avatar.vercel.sh/user6",
+      profileUrl: "https://example.com/profile/user6",
+    },
+    {
+      imageUrl: "https://avatar.vercel.sh/user7",
+      profileUrl: "https://example.com/profile/user7",
+    },
   ];

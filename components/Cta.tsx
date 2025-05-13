@@ -31,9 +31,9 @@ function Cta({}: Props) {
         <Image
           src="/assets/mobile_cta.svg" // Ensure the image is in the /public/assets folder
           alt="Techno Billion AI Preview"
-          width={500} // Increased width for a larger image
-          height={1000} // Increased height for a larger image
-          className="absolute bottom-[-50%] drop-shadow-2xl" // Adjusted bottom positioning to hide the lower section
+          width={900} 
+          height={1000} 
+          className="absolute bottom-[-90%] drop-shadow-2xl" // Adjusted bottom positioning to hide the lower section
         />
       </div>
     </main>
