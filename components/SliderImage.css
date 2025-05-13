@@ -1,0 +1,44 @@
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-row {
+  display: flex;
+  gap: 16px;
+  animation: scroll-left 10s linear infinite;
+}
+
+.slider-row img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.slider-row-top {
+  animation: scroll-left 15s linear infinite;
+}
+
+.slider-row-bottom {
+  animation: scroll-right 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
