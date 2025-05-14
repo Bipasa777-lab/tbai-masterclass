@@ -29,8 +29,8 @@ function Cta({}: Props) {
         <Image
           src="/assets/mobile_cta.svg" // Ensure this image is inside public/assets/
           alt="Techno Billion AI Preview"
-          width={600}
-          height={800}
+          width={900}
+          height={1000}
           className="absolute max-w-none drop-shadow-2xl pointer-events-none"
           priority
         />
