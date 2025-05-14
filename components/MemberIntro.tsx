@@ -1,24 +1,46 @@
-import React from 'react';
+"use client"
+
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function MemberIntro() {
+
+  useEffect(() => {
+  AOS.init({ duration: 800, once: true });
+}, []);
+
+
   return (
     <section className="bg-black text-white py-16 px-4 sm:px-8 lg:px-20">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center md:items-start">
-        
+      <div
+        className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center md:items-start"
+        data-aos="fade-up"
+      >
         {/* Left: Image */}
-        <div className="flex-shrink-0 w-full md:w-[45%]">
-  <img
-    src="/assets/abhrajit.svg"
-    alt="Abhrajit Saha"
-    className="rounded-xl w-[90%] mx-auto object-cover max-h-[400px]"
-  />
-</div>
+        <div
+          className="flex-shrink-0 w-full md:w-[45%]"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <img
+            src="/assets/abhrajit.svg"
+            alt="Abhrajit Saha"
+            className="rounded-xl w-[90%] mx-auto object-cover max-h-[400px] shadow-lg"
+          />
+        </div>
 
         {/* Right: Content */}
-        <div className="flex flex-col gap-6 md:w-1/2">
-          <h2 className="text-3xl font-semibold">Meet Abhrajit Saha</h2>
+        <div
+          className="flex flex-col gap-6 md:w-1/2"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
+            Meet Abhrajit Saha
+          </h2>
 
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-base">
             <li className="flex items-start">
               <span className="text-red-500 mr-2">⭐</span>
               <span>Co-Founder & Director, Techno Billion AI</span>
@@ -44,15 +66,21 @@ function MemberIntro() {
 
           {/* Brand logos */}
           <div className="mt-6">
-            <h4 className="text-sm uppercase text-gray-400 mb-3">Brands Educated</h4>
-            <div className="flex flex-wrap gap-4 items-center">
-              <img src="/icons/iit.svg" alt="IIT" className="h-6" />
-              <img src="/icons/google.svg" alt="Google" className="h-6" />
-              <img src="/icons/nv.svg" alt="Techno India" className="h-6" />
-              <img src="/icons/microsoft.svg" alt="Microsoft" className="h-6" />
-              <img src="/icons/intel.svg" alt="Intel" className="h-6" />
-              <img src="/icons/acer.svg" alt="Acer" className="h-6" />
-              <img src="/icons/ti.svg" alt="Techno" className="h-6" />
+            <h4 className="text-sm uppercase text-gray-400 mb-3 tracking-wide">
+              Brands Educated
+            </h4>
+            <div
+              className="flex flex-wrap gap-4 items-center"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img src="/icons/iit.svg" alt="IIT" className="h-6 transition" />
+              <img src="/icons/google.svg" alt="Google" className="h-6 transition" />
+              <img src="/icons/nv.svg" alt="Techno India" className="h-6 transition" />
+              <img src="/icons/microsoft.svg" alt="Microsoft" className="h-6 transition" />
+              <img src="/icons/intel.svg" alt="Intel" className="h-6 transition" />
+              <img src="/icons/acer.svg" alt="Acer" className="h-6 transition" />
+              <img src="/icons/ti.svg" alt="Techno" className="h-6 transition" />
             </div>
           </div>
         </div>

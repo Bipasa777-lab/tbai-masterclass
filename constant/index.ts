@@ -29,18 +29,23 @@ export const faqItems = [
       {
         title: 'Module 1: Foundations & GPT-4o Essentials',
         subtitle: '4 weeks • 20 Resources • 6 Projects',
+        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt esse voluptates sed libero sit iure unde nulla reiciendis adipisci excepturi."
       },
       {
         title: 'Module 2: AI in Everyday Life',
         subtitle: '3 weeks • 8 Resources • 2 Projects',
+        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt esse voluptates sed libero sit iure unde nulla reiciendis adipisci excepturi."
+
       },
       {
         title: 'Module 3: AI Ethics & Creativity',
         subtitle: '5 weeks • 12 Resources • 4 Projects',
+        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt esse voluptates sed libero sit iure unde nulla reiciendis adipisci excepturi."
       },
       {
         title: 'Module 4: Future Trends & Final Project',
         subtitle: '6 weeks • 15 Resources • 5 Projects',
+        content:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt esse voluptates sed libero sit iure unde nulla reiciendis adipisci excepturi."
       },
     ];
   

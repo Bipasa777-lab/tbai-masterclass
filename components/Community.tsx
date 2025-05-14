@@ -20,12 +20,12 @@ function Community({}: Props) {
 
       {/* Call-to-Action Button */}
       <button
-        className="mt-4 inline-flex items-center gap-3 px-6 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black text-base font-medium shadow-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
-        aria-label="Join our global design community"
-      >
-        <span>Join Community</span>
-        <Earth className="w-6 h-6" />
-      </button>
+  className="mt-4 inline-flex items-center gap-4 px-8 py-4 rounded-full bg-red-600 text-white dark:bg-white dark:text-black text-base font-medium shadow-lg hover:bg-red-500 dark:hover:bg-gray-100 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600"
+  aria-label="Join our global design community"
+>
+  <span>Join Community</span>
+  <Earth className="w-6 h-6" />
+</button>
 
       {/* Slider Section */}
       <div className="w-full max-w-7xl mt-12 overflow-hidden">

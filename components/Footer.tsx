@@ -60,9 +60,7 @@ const Footer = () => {
               </div>
 
               <div className="flex items-center space-x-2">
-                {Array.from({ length: 5 }).map((_, idx) => (
-                  <Star key={idx} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                ))}
+                
                 <span className="text-sm text-gray-400">Join 4000+ Students</span>
               </div>
             </div>

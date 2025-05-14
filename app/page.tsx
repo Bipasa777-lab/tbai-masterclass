@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MemberIntro from "@/components/MemberIntro";
 import Navbar from "@/components/Navbar";
+import Partners from "@/components/Partners";
 import Tools from "@/components/Tools";
 
 export default function Home() {
@@ -14,10 +15,11 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <Partners/>
       <Features />
       <ChooseUs />
-      <MemberIntro />
       <Tools/>
+      <MemberIntro />
       <Community />
       <Faq />
       <Cta />

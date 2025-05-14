@@ -1,94 +1,137 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import { HiCheckCircle } from 'react-icons/hi';
 import { FaBook, FaGraduationCap, FaClock } from 'react-icons/fa';
+import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const FeatureSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true,
+      offset: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <section className="w-full py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+    <section className="relative w-full min-h-[90vh] md:min-h-screen py-16 px-6 sm:px-8 md:px-10 bg-white flex items-center overflow-hidden">
+      {/* Background gradient decoration */}
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-gray-100 to-white"></div>
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-gray-100 to-white"></div>
+
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-20 w-full py-8 md:py-12">
         {/* Left Section */}
-        <div className="flex-1 max-w-xl">
-          <h2 className="text-3xl sm:text-4xl font-bold leading-snug mb-6">
-            The only program you need to be <br /> among the top 1%
+        <div 
+          data-aos="fade-right" 
+          data-aos-delay="100" 
+          className="flex-1 max-w-xl text-center lg:text-left"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold leading-snug mb-6 text-gray-900">
+            The only program you need to be <br />
+            <span className="relative inline-block">
+              <span className="relative z-10">among the top 1%</span>
+            </span>
           </h2>
 
-          <div className="flex flex-wrap gap-4 mb-6">
-            <button className="bg-red-600 text-white px-6 py-2 rounded-lg font-semibold">
+          <div 
+            data-aos="fade-up" 
+            data-aos-delay="200" 
+            className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
+          >
+            <button className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-200">
               Enroll now
             </button>
-            <button className="border border-gray-300 text-black px-6 py-2 rounded-lg font-semibold">
+            <button className="border border-gray-300 text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition shadow-sm hover:shadow-md transform hover:-translate-y-1 duration-200">
               See curriculum
             </button>
           </div>
 
-          <ul className="space-y-4 text-sm sm:text-base text-gray-800">
-            <li className="flex items-start gap-2">
-              <HiCheckCircle className="text-black mt-1" />
-              Understand AI from the ground up—no tech background needed.
-            </li>
-            <li className="flex items-start gap-2">
-              <HiCheckCircle className="text-black mt-1" />
-              Explore real-world tools like GPT-4o, Canva AI, and DALL·E 3.
-            </li>
-            <li className="flex items-start gap-2">
-              <HiCheckCircle className="text-black mt-1" />
-              Build practical AI projects, from chatbots to personal assistants.
-            </li>
-            <li className="flex items-start gap-2">
-              <HiCheckCircle className="text-black mt-1" />
-              Get expert guidance and feedback to sharpen your skills.
-            </li>
+          <ul 
+            data-aos="fade-up" 
+            data-aos-delay="300" 
+            className="space-y-4 text-sm sm:text-base text-gray-800 text-left max-w-lg mx-auto lg:mx-0"
+          >
+            {[
+              "Understand AI from the ground up—no tech background needed.",
+              "Explore real-world tools like GPT-4o, Canva AI, and DALL·E 3.",
+              "Build practical AI projects, from chatbots to personal assistants.",
+              "Get expert guidance and feedback to sharpen your skills."
+            ].map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <HiCheckCircle className="text-red-600 mt-1 flex-shrink-0" size={20} />
+                <span className="leading-relaxed">{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Middle Image */}
-        <div className="w-full max-w-xs lg:max-w-sm">
-          <img
+        {/* Middle Image - Hidden on small screens */}
+        <div 
+          data-aos="zoom-in" 
+          data-aos-delay="300" 
+          className="hidden md:block lg:block w-full max-w-xs lg:max-w-sm relative"
+        >
+          <div className="absolute inset-0 bg-red-100 rounded-full filter blur-xl opacity-50 transform -rotate-12"></div>
+          <Image
             src="/assets/mobile_feat.svg"
             alt="Phone with AI program"
-            className="w-full h-auto"
+            className="w-full h-auto object-contain relative z-10 drop-shadow-xl"
+            height={500}
+            width={500}
           />
         </div>
 
         {/* Right Features */}
-        <div className="flex-1 space-y-8">
-          <div className="flex items-start gap-4">
-            <div className="bg-red-600 text-white p-2 rounded-full">
-              <FaBook size={20} />
+        <div 
+          data-aos="fade-left" 
+          data-aos-delay="400" 
+          className="flex-1 space-y-8 w-full"
+        >
+          {[
+            {
+              icon: <FaBook size={20} />,
+              title: "Learn AI Hands-on",
+              description: "Work on real-life projects using tools like GPT-4o, Canva AI, and more."
+            },
+            {
+              icon: <FaGraduationCap size={20} />,
+              title: "Built for Non-Techies or Techies",
+              description: "No coding required—just curiosity and a drive to explore AI."
+            },
+            {
+              icon: <FaClock size={20} />,
+              title: "Create Your Own AI Assistant",
+              description: "Finish the course with a working AI tool built entirely by you."
+            }
+          ].map((feature, index) => (
+            <div 
+              key={index} 
+              data-aos="fade-up" 
+              data-aos-delay={500 + (index * 100)} 
+              className="flex items-start gap-4 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300"
+            >
+              <div className="bg-red-600 text-white p-3 rounded-lg">
+                {feature.icon}
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg text-gray-900">{feature.title}</h4>
+                <p className="text-sm text-gray-600 mt-2">
+                  {feature.description}
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold text-lg">Learn AI Hands-on</h4>
-              <p className="text-sm text-gray-600 mt-1">
-                Work on real-life projects using tools like GPT-4o, Canva AI, and more.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="bg-red-600 text-white p-2 rounded-full">
-              <FaGraduationCap size={20} />
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg">Built for Non-Techies or Techies</h4>
-              <p className="text-sm text-gray-600 mt-1">
-                No coding required—just curiosity and a drive to explore AI.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="bg-red-600 text-white p-2 rounded-full">
-              <FaClock size={20} />
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg">Create Your Own AI Assistant</h4>
-              <p className="text-sm text-gray-600 mt-1">
-                Finish the course with a working AI tool built entirely by you.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      {/* Small floating decorations */}
+      <div className="absolute top-1/4 left-10 w-6 h-6 bg-red-100 rounded-full hidden lg:block" data-aos="fade-down-right" data-aos-delay="700"></div>
+      <div className="absolute bottom-1/4 right-10 w-8 h-8 bg-red-200 rounded-full hidden lg:block" data-aos="fade-up-left" data-aos-delay="800"></div>
+      <div className="absolute top-3/4 left-1/4 w-4 h-4 bg-red-300 rounded-full hidden lg:block" data-aos="zoom-in" data-aos-delay="900"></div>
     </section>
   );
 };
