@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useState } from "react";
 import {
@@ -18,7 +18,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const FAQSection: React.FC = () => {
-  const [activeAccordion, setActiveAccordion] = useState<string | null>("item-0");
+  const [activeAccordion, setActiveAccordion] = useState<string | undefined>(
+    "item-0"
+  );
 
   useEffect(() => {
     AOS.init({
@@ -48,7 +50,8 @@ const FAQSection: React.FC = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
-            Find answers to the most common questions about our AI courses and programs.
+            Find answers to the most common questions about our AI courses and
+            programs.
           </p>
         </div>
 
@@ -70,7 +73,8 @@ const FAQSection: React.FC = () => {
                 </h3>
                 <p className="text-slate-600 mb-6 text-sm sm:text-base leading-relaxed">
                   No worries! If you have any other questions or need more
-                  information, feel free to reach out directly through any of these channels.
+                  information, feel free to reach out directly through any of
+                  these channels.
                 </p>
 
                 <div className="space-y-6">
@@ -81,12 +85,16 @@ const FAQSection: React.FC = () => {
                         <MailIcon className="h-5 w-5 text-red-600 " />
                       </div>
                       <div className="ml-3">
-                        <h4 className="text-base font-medium mb-1 text-slate-800">Email us at</h4>
+                        <h4 className="text-base font-medium mb-1 text-slate-800">
+                          Email us at
+                        </h4>
                         <a
                           href="mailto:hello@technobillion.ai"
                           className="inline-flex items-center text-red-600 hover:text-red-800 font-medium group transition-all"
                         >
-                          <span className="truncate">hello@technobillion.ai</span>
+                          <span className="truncate">
+                            hello@technobillion.ai
+                          </span>
                           <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
                       </div>
@@ -100,7 +108,9 @@ const FAQSection: React.FC = () => {
                         <PhoneIcon className="h-5 w-5 text-red-600" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="text-base font-medium mb-1 text-slate-800">Call us</h4>
+                        <h4 className="text-base font-medium mb-1 text-slate-800">
+                          Call us
+                        </h4>
                         <a
                           href="tel:+1234567890"
                           className="inline-flex items-center text-red-600 hover:text-red-800 font-medium group transition-all"
@@ -142,7 +152,9 @@ const FAQSection: React.FC = () => {
                       className="px-5 sm:px-6 py-4 hover:bg-slate-50 text-slate-800 font-medium text-left text-sm sm:text-base flex transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
                       onClick={() =>
                         setActiveAccordion(
-                          activeAccordion === `item-${index}` ? null : `item-${index}`
+                          activeAccordion === `item-${index}`
+                            ? undefined
+                            : `item-${index}`
                         )
                       }
                     >
