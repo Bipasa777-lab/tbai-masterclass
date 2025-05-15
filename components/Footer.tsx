@@ -79,14 +79,16 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
+          {/* 'Overview', 'Features', 'Demo', 'Curriculum', 'Tools', 'Instructor', 'Community' */}
           <div className="lg:col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
-              <li><Link href="/portfolio" className="text-gray-300 hover:text-white">Portfolio</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white">Home</Link></li>
+              <li><Link href="#features" className="text-gray-300 hover:text-white">Features</Link></li>
+              <li><Link href="#curriculum" className="text-gray-300 hover:text-white">Curriculum</Link></li>
+              <li><Link href="#tools" className="text-gray-300 hover:text-white">Tools</Link></li>
+              <li><Link href="#instructor" className="text-gray-300 hover:text-white">Instructor</Link></li>
+              <li><Link href="#community" className="text-gray-300 hover:text-white">Community</Link></li>
             </ul>
           </div>
 
