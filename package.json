@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@radix-ui/react-accordion": "^1.2.10",
     "@radix-ui/react-aspect-ratio": "^1.1.6",
     "@radix-ui/react-avatar": "^1.1.9",
@@ -20,7 +21,7 @@
     "cobe": "^0.6.3",
     "framer-motion": "^12.11.3",
     "lucide-react": "^0.509.0",
-    "motion": "^12.11.0",
+    "motion": "^12.11.3",
     "next": "14.2.28",
     "react": "^18",
     "react-dom": "^18",
@@ -29,6 +30,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",

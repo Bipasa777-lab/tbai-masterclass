@@ -94,11 +94,10 @@ const Footer = () => {
           <div className="lg:col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Pages</h3>
             <ul className="space-y-2">
-              <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link href="/faq" className="text-gray-300 hover:text-white">FAQ</Link></li>
-              <li><Link href="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
-              <li><Link href="/sitemap" className="text-gray-300 hover:text-white">Sitemap</Link></li>
+              <li><Link href="https://www.technobillion.ai/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link href="#faq" className="text-gray-300 hover:text-white">FAQ</Link></li>
+              <li><Link href="https://academy.technobillion.ai/privacy-police" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="https://academy.technobillion.ai/terms-and-condition" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -106,19 +105,16 @@ const Footer = () => {
           <div className="lg:col-span-3 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex flex-col space-y-3">
-              <Link href="https://github.com" className="flex items-center text-gray-300 hover:text-white">
-                <Github className="w-5 h-5 mr-2" /> GitHub
-              </Link>
-              <Link href="https://twitter.com" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="https://x.com/TechnoBillionAI" className="flex items-center text-gray-300 hover:text-white">
                 <Twitter className="w-5 h-5 mr-2" /> Twitter
               </Link>
-              <Link href="https://instagram.com" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="https://www.instagram.com/technobillionai/" className="flex items-center text-gray-300 hover:text-white">
                 <Instagram className="w-5 h-5 mr-2" /> Instagram
               </Link>
-              <Link href="https://linkedin.com" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="https://www.linkedin.com/company/techno-billion-ai/" className="flex items-center text-gray-300 hover:text-white">
                 <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
               </Link>
-              <Link href="mailto:contact@companyname.com" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="mailto:empower@technobillionai.com" className="flex items-center text-gray-300 hover:text-white">
                 <Mail className="w-5 h-5 mr-2" /> Email Us
               </Link>
             </div>

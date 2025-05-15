@@ -24,7 +24,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const ChooseUs = () => {
+const ChooseUs = ({ id }: { id?: string }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -78,17 +78,15 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen flex flex-col bg-black relative">
-      {/* Zigzag Image in Upper-Left Corner */}
+    <section  className="w-full min-h-screen flex flex-col bg-black relative overflow-hidden">
       <img
-        src="/design/m5.svg" // Replace with the actual path to your zigzag image
+        src="/design/m5.svg"
         alt="Zigzag"
-        className="absolute top-4 left-4 w-16 h-auto z-10" // Increased size (w-16)
+        className="absolute top-4 left-4 w-12 sm:w-14 md:w-16 h-auto z-10"
       />
 
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F9FAFB] flex-1 relative">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-16 px-4 sm:px-6 md:px-10 lg:px-12 bg-[#F9FAFB] flex-1 relative">
+        <div className="max-w-7xl mx-auto text-center">
           <button
             className="bg-red-600 text-white text-sm px-4 py-1.5 rounded-full font-medium mb-4 hover:bg-red-700 transition"
             data-aos="fade-up"
@@ -107,7 +105,7 @@ const ChooseUs = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="relative flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition"
+                className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition"
                 data-aos="fade-up"
                 data-aos-delay={150 + index * 100}
               >
@@ -123,20 +121,17 @@ const ChooseUs = () => {
           </div>
         </div>
 
-        {/* Zigzag Image in Lower-Right Corner */}
         <img
-          src="/design/m4.svg" // Replace with the actual path to your zigzag image
+          src="/design/m4.svg"
           alt="Zigzag"
-          className="absolute bottom-4 right-4 w-16 h-auto" // Increased size (w-16)
+          className="absolute bottom-4 right-4 w-12 sm:w-14 md:w-16 h-auto"
         />
       </section>
 
-      {/* Modules & Course Info Section */}
-      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12">
+      <section id={id} className="py-16 px-4 sm:px-6 md:px-10 lg:px-12">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
-          {/* Course Info */}
           <div
-            className="w-full lg:w-[380px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col justify-between text-white"
+            className="w-full lg:max-w-sm bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col justify-between text-white"
             data-aos="fade-left"
           >
             <div>
@@ -191,7 +186,6 @@ const ChooseUs = () => {
             </button>
           </div>
 
-          {/* Modules Section */}
           <div
             className="flex-1 bg-black text-white rounded-2xl p-6 bg-[url('/stripe-pattern.png')] bg-cover relative overflow-hidden"
             data-aos="fade-right"

@@ -51,31 +51,77 @@ export const faqItems = [
   
     export const dummyAvatars = [
     {
-      imageUrl: "https://avatar.vercel.sh/user1",
-      profileUrl: "https://example.com/profile/user1",
+      imageUrl: "https://th.bing.com/th/id/OIP.SLka2no6RlBQJiDcg-4SCQHaHa?w=512&h=512&rs=1&pid=ImgDetMain",
+      profileUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg",
     },
     {
-      imageUrl: "https://avatar.vercel.sh/user2",
-      profileUrl: "https://example.com/profile/user2",
+      imageUrl: "https://cdn.theconversation.com/avatars/269608/width238/perrot_portrait_-_crop.jpg",
+      profileUrl: "https://cdn.theconversation.com/avatars/269608/width238/perrot_portrait_-_crop.jpg",
     },
     {
-      imageUrl: "https://avatar.vercel.sh/user3",
-      profileUrl: "https://example.com/profile/user3",
+      imageUrl: "https://i1.rgstatic.net/ii/profile.image/887392613445633-1588582294251_Q512/Nicolas-Francart.jpg",
+      profileUrl: "https://i1.rgstatic.net/ii/profile.image/887392613445633-1588582294251_Q512/Nicolas-Francart.jpg",
     },
     {
-      imageUrl: "https://avatar.vercel.sh/user4",
+      imageUrl: "https://th.bing.com/th/id/OIP.j40t-DliUhmg-kk9bS2lxQHaHa?w=512&h=512&rs=1&pid=ImgDetMain",
       profileUrl: "https://example.com/profile/user4",
     },
     {
-      imageUrl: "https://avatar.vercel.sh/user5",
+      imageUrl: "https://th.bing.com/th/id/OIP.aLgoSw9nFmowz9NYmYy1pwHaHa?w=512&h=512&rs=1&pid=ImgDetMain",
       profileUrl: "https://example.com/profile/user5",
     },
+
+  ];
+
+
+  export const communityMembers = [
     {
-      imageUrl: "https://avatar.vercel.sh/user6",
-      profileUrl: "https://example.com/profile/user6",
+      id: 1,
+      name: "Sarah Johnson",
+      role: "Senior UI Designer",
+      location: "New York, USA",
+      imageUrl: "https://th.bing.com/th/id/OIP.kf9TvsuxepBOhAV4cTHEoAHaHa?rs=1&pid=ImgDetMain",
+      testimonial: "Educore transformed my career path. The mentorship was invaluable.",
     },
     {
-      imageUrl: "https://avatar.vercel.sh/user7",
-      profileUrl: "https://example.com/profile/user7",
+      id: 2,
+      name: "Miguel Rodriguez",
+      role: "UX Researcher",
+      location: "Barcelona, Spain",
+      imageUrl: "https://www.profilebakery.com/wp-content/uploads/2024/05/Profile-picture-created-with-ai.jpeg",
+      testimonial: "The global perspective I gained here is unmatched anywhere else.",
     },
+    {
+      id: 3,
+      name: "Aisha Patel",
+      role: "Product Designer",
+      location: "Mumbai, India",
+      imageUrl: "https://th.bing.com/th/id/OIP.q4rnEq0sKq1ScOhrDcqQYAHaHa?w=512&h=512&rs=1&pid=ImgDetMain",
+      testimonial: "From beginner to professional in just 8 months. Thank you Educore!",
+    },
+    {
+      id: 4,
+      name: "David Kim",
+      role: "Interaction Designer",
+      location: "Seoul, South Korea",
+      imageUrl: "https://th.bing.com/th/id/OIP.KQAKivbHo20Tvm7NXDVldwHaKG?w=480&h=655&rs=1&pid=ImgDetMain",
+      testimonial: "The community support made all the difference in my design journey.",
+    },
+    {
+      id: 5,
+      name: "Olivia Chen",
+      role: "UI/UX Consultant",
+      location: "Sydney, Australia",
+      imageUrl: "https://th.bing.com/th/id/OIP.e_ixm37WEM992tkZM8IjrAHaHa?w=512&h=512&rs=1&pid=ImgDetMain",
+      testimonial: "The networking opportunities have led to amazing collaborations.",
+    },
+    {
+      id: 6,
+      name: "Emmanuel Okonkwo",
+      role: "Design Lead",
+      location: "Lagos, Nigeria",
+      imageUrl: "https://i1.rgstatic.net/ii/profile.image/1110771350147078-1641839935875_Q512/Ramandeep-Narwal.jpg",
+      testimonial: "Educore opened doors to global opportunities I never thought possible.",
+    },
+
   ];

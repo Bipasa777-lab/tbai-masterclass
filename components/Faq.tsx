@@ -39,10 +39,10 @@ const FAQSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 md:px-8 lg:px-16 py-12 lg:py-20 overflow-hidden">
+    <section id="faq" className="bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 md:px-8 lg:px-16 py-12 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-14" data-aos="fade-up">
+        <div className="text-center mb-8 md:mb-10" data-aos="fade-up">
           <span className="bg-red-100 text-red-600 text-xs font-medium py-1 px-3 rounded-full">
             Support
           </span>
@@ -56,7 +56,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start py-20">
           {/* Contact Info */}
           <div
             className="order-2 lg:order-1 lg:col-span-5"
@@ -64,10 +64,8 @@ const FAQSection: React.FC = () => {
             data-aos-delay="200"
           >
             <div className="lg:sticky top-24">
-              <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-slate-100 bg-gradient-to-br from-white to-slate-50 transition-shadow hover:shadow-xl duration-300">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-full mb-4">
-                  <MessageCircleIcon className="h-6 w-6 text-red-600" />
-                </div>
+              <div className="  ">
+                
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-slate-800">
                   Didn't find your answer?
                 </h3>
@@ -89,11 +87,11 @@ const FAQSection: React.FC = () => {
                           Email us at
                         </h4>
                         <a
-                          href="mailto:hello@technobillion.ai"
+                          href="mailto:hello@empower@technobillionai.com"
                           className="inline-flex items-center text-red-600 hover:text-red-800 font-medium group transition-all"
                         >
                           <span className="truncate">
-                            hello@technobillion.ai
+                            empower@technobillionai.com
                           </span>
                           <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
@@ -112,10 +110,10 @@ const FAQSection: React.FC = () => {
                           Call us
                         </h4>
                         <a
-                          href="tel:+1234567890"
+                          href="tel:+918240879502"
                           className="inline-flex items-center text-red-600 hover:text-red-800 font-medium group transition-all"
                         >
-                          <span className="truncate">+1 (234) 567-890</span>
+                          <span className="truncate">+91 82408 79502</span>
                           <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
                       </div>
@@ -132,7 +130,6 @@ const FAQSection: React.FC = () => {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            <div className="bg-white rounded-xl shadow-lg border border-slate-100 p-1 transition-shadow hover:shadow-xl duration-300">
               <Accordion
                 type="single"
                 collapsible
@@ -171,7 +168,6 @@ const FAQSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
