@@ -56,13 +56,12 @@ const Footer = () => {
                   />
                 ))}
                 <div className="flex items-center justify-center w-10 h-10 bg-white text-black text-sm font-semibold rounded-full border-2 border-black">
-                  15k+
+                  +15k
                 </div>
               </div>
 
               <div className="flex items-center space-x-2">
-                
-                <span className="text-sm text-gray-400">Join 15000+ Students</span>
+                <span className="text-sm text-gray-400">15k+ Students</span>
               </div>
             </div>
 

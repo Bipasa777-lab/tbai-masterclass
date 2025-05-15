@@ -9,7 +9,7 @@ function Partners({}: Props) {
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between flex-wrap gap-4 sm:gap-6">
         {/* Tagline */}
         <span className="text-sm sm:text-base font-medium text-center sm:text-left text-black whitespace-nowrap">
-          Upscaling <span className="text-red-600 font-semibold">billions</span> at
+          Upscaling <span className="text-red-600 font-semibold">billions</span> with the partnership of
         </span>
 
         {/* Logos */}

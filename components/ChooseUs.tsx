@@ -152,7 +152,7 @@ const ChooseUs = ({ id }: { id?: string }) => {
               </p>
 
               <div className="flex items-center space-x-2 mb-5">
-                <AvatarCircles numPeople={10} avatarUrls={dummyAvatars.slice(0, 5)} />
+                <AvatarCircles numPeople={15} avatarUrls={dummyAvatars.slice(0, 5)} />
               </div>
 
               <ul className="text-sm space-y-3 text-gray-200">

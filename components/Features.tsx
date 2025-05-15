@@ -38,9 +38,13 @@ const FeatureSection = ({ id }: { id?: string }) => {
             <button className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition hover:shadow-lg transform hover:-translate-y-1 duration-200">
               Enroll now
             </button>
-            <button className="border border-gray-300 text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition hover:shadow-md transform hover:-translate-y-1 duration-200">
+            <a
+              href="/curriculms.pdf" // Update this path to the actual location of your PDF
+              download
+              className="border border-gray-300 text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition hover:shadow-md transform hover:-translate-y-1 duration-200"
+            >
               See curriculum
-            </button>
+            </a>
           </div>
 
           <ul

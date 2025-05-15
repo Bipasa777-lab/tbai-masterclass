@@ -50,9 +50,9 @@ const HeroSection = ({ id }: { id?: string }) => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap items-center justify-center lg:justify-start mb-8 gap-4 sm:gap-6"
           >
-            <AvatarCircles numPeople={10} avatarUrls={dummyAvatars} />
+            <AvatarCircles numPeople={15} avatarUrls={dummyAvatars} />
             <div className="flex flex-col items-start text-center sm:text-left">
-              <span className="text-white font-medium text-sm sm:text-base">Join 10k Students</span>
+              <span className="text-white font-medium text-sm sm:text-base">15k+ Students</span>
               <span className="text-xs sm:text-sm text-gray-200">⭐⭐⭐⭐⭐ (4.9/5 avg rating)</span>
             </div>
           </motion.div>
