@@ -50,12 +50,41 @@ const HeroSection = () => {
             className="flex items-center justify-center lg:justify-start mb-8"
           >
             <div className="flex items-center gap-3">
-              <AvatarCircles
-                numPeople={99}
-                avatarUrls={dummyAvatars.slice(0, 5)}
-              />
+              {/* Custom Avatar SVG Images */}
+              <div className="flex -space-x-4">
+                <Image
+                  src="assets/avatars/avatar1.svg"
+                  alt="Avatar 1"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white"
+                />
+                <Image
+                  src="assets/avatars/avatar2.svg"
+                  alt="Avatar 2"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white"
+                />
+                <Image
+                  src="assets/avatars/avatar3.svg"
+                  alt="Avatar 3"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white"
+                />
+                <Image
+                  src="assets/avatars/avatar4.svg"
+                  alt="Avatar 4"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full border-2 border-white"
+                />
+              </div>
+
+              {/* Text Section */}
               <div className="flex flex-col items-start">
-                <span className="text-white font-medium">Join 400+ Students</span>
+                <span className="text-white font-medium">Join 4000 Students</span> {/* Display "4000" */}
                 <span className="text-xs text-gray-200">⭐⭐⭐⭐⭐ (4.9/5 avg rating)</span>
               </div>
             </div>
@@ -73,7 +102,7 @@ const HeroSection = () => {
             </Button>
             <Button
               variant="outline"
-              className="w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-base font-medium px-6 py-3 h-auto"
+              className="w-full sm:w-auto bg-white text-black border border-white/20 hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-base font-medium px-6 py-3 h-auto"
             >
               Download Brochure
             </Button>

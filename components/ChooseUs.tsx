@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -78,17 +78,22 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen flex flex-col bg-black">
+    <section className="w-full min-h-screen flex flex-col bg-black relative">
+      {/* Zigzag Image in Upper-Left Corner */}
+      <img
+        src="/design/m5.svg" // Replace with the actual path to your zigzag image
+        alt="Zigzag"
+        className="absolute top-4 left-4 w-16 h-auto z-10" // Increased size (w-16)
+      />
+
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F9FAFB] flex-1">
+      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F9FAFB] flex-1 relative">
         <div className="max-w-6xl mx-auto text-center">
           <button
             className="bg-red-600 text-white text-sm px-4 py-1.5 rounded-full font-medium mb-4 hover:bg-red-700 transition"
             data-aos="fade-up"
           >
             Why Us?
-
-            
           </button>
           <h2
             className="text-2xl md:text-3xl lg:text-4xl font-bold mb-10"
@@ -102,7 +107,7 @@ const ChooseUs = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition"
+                className="relative flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition"
                 data-aos="fade-up"
                 data-aos-delay={150 + index * 100}
               >
@@ -117,6 +122,13 @@ const ChooseUs = () => {
             ))}
           </div>
         </div>
+
+        {/* Zigzag Image in Lower-Right Corner */}
+        <img
+          src="/design/m4.svg" // Replace with the actual path to your zigzag image
+          alt="Zigzag"
+          className="absolute bottom-4 right-4 w-16 h-auto" // Increased size (w-16)
+        />
       </section>
 
       {/* Modules & Course Info Section */}
@@ -124,61 +136,60 @@ const ChooseUs = () => {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
           {/* Course Info */}
           <div
-  className="w-full lg:w-[380px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col justify-between text-white"
-  data-aos="fade-left"
->
-  <div>
-    <div className="bg-gradient-to-r from-red-600 to-red-500 text-white rounded-xl p-5 mb-6 shadow-md">
-      <h3 className="text-lg font-semibold">Fundamentals of AI</h3>
-      <p className="text-sm mt-1 opacity-90">Join now for an extra discount.</p>
-      <button className="mt-4 px-4 py-2 bg-white text-red-600 font-semibold rounded-md text-sm hover:bg-gray-100 transition">
-        See curriculum
-      </button>
-    </div>
+            className="w-full lg:w-[380px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col justify-between text-white"
+            data-aos="fade-left"
+          >
+            <div>
+              <div className="bg-gradient-to-r from-red-600 to-red-500 text-white rounded-xl p-5 mb-6 shadow-md">
+                <h3 className="text-lg font-semibold">Fundamentals of AI</h3>
+                <p className="text-sm mt-1 opacity-90">Join now for an extra discount.</p>
+                <button className="mt-4 px-4 py-2 bg-white text-red-600 font-semibold rounded-md text-sm hover:bg-gray-100 transition">
+                  See curriculum
+                </button>
+              </div>
 
-    <h4 className="text-base sm:text-lg font-semibold mb-2">
-      Fundamentals of AI: The Ultimate AI program by TBAI
-    </h4>
-    <p className="text-sm text-gray-300 mb-4">
-      Live, practical, and built for your schedule.
-    </p>
+              <h4 className="text-base sm:text-lg font-semibold mb-2">
+                Fundamentals of AI: The Ultimate AI program by TBAI
+              </h4>
+              <p className="text-sm text-gray-300 mb-4">
+                Live, practical, and built for your schedule.
+              </p>
 
-    <div className="flex items-center space-x-2 mb-5">
-      <AvatarCircles numPeople={220} avatarUrls={dummyAvatars.slice(0, 5)} />
-    </div>
+              <div className="flex items-center space-x-2 mb-5">
+                <AvatarCircles numPeople={220} avatarUrls={dummyAvatars.slice(0, 5)} />
+              </div>
 
-    <ul className="text-sm space-y-3 text-gray-200">
-      <li className="flex items-start">
-        <span className="text-green-400 mr-2">✅</span>
-        <span>Duration: 4 weeks (2×90-min live Zoom sessions/week)</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-400 mr-2">✅</span>
-        <span>Trainers: IIT-MTech grads with analogies & stories</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-400 mr-2">✅</span>
-        <span>Labs: Weekly GPT-4o & AI tools hands-on</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-400 mr-2">✅</span>
-        <span>Final Project: Build & present your own AI assistant</span>
-      </li>
-      <li className="flex items-start">
-        <span className="text-green-400 mr-2">✅</span>
-        <span>Certification: Digital badge + "Prompt Sheet"</span>
-      </li>
-    </ul>
-  </div>
+              <ul className="text-sm space-y-3 text-gray-200">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✅</span>
+                  <span>Duration: 4 weeks (2×90-min live Zoom sessions/week)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✅</span>
+                  <span>Trainers: IIT-MTech grads with analogies & stories</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✅</span>
+                  <span>Labs: Weekly GPT-4o & AI tools hands-on</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✅</span>
+                  <span>Final Project: Build & present your own AI assistant</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-2">✅</span>
+                  <span>Certification: Digital badge + "Prompt Sheet"</span>
+                </li>
+              </ul>
+            </div>
 
-  <button
-    className="mt-6 w-full py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transform hover:scale-105 transition shadow-md"
-    data-aos="zoom-in"
-  >
-    Enroll now
-  </button>
-</div>
-
+            <button
+              className="mt-6 w-full py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transform hover:scale-105 transition shadow-md"
+              data-aos="zoom-in"
+            >
+              Enroll now
+            </button>
+          </div>
 
           {/* Modules Section */}
           <div
@@ -213,8 +224,6 @@ const ChooseUs = () => {
               </Accordion>
             </div>
           </div>
-
-          
         </div>
       </section>
     </section>
