@@ -24,7 +24,7 @@ function MemberIntro({ id }: { id?: string }) {
           <img
             src="/assets/abhrajit.svg"
             alt="Abhrajit Saha"
-            className="rounded-2xl max-w-[90%] max-h-[420px] object-cover shadow-xl shadow-red-500/20 transition-all duration-500 hover:scale-105"
+            className="rounded-2xl max-w-[90%] max-h-[420px] object-cover  transition-all duration-500 hover:scale-105"
           />
         </div>
 
@@ -77,7 +77,7 @@ function MemberIntro({ id }: { id?: string }) {
           {/* Brand logos */}
           <div className="mt-8">
             <h4 className="text-xs uppercase text-gray-400 mb-4 tracking-wider">
-              Brands Educated
+              Brands ASSOCIATED
             </h4>
             <div
               className="flex flex-wrap gap-4 items-center"

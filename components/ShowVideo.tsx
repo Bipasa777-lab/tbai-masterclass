@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Play, Users, Calendar, Star } from 'lucide-react';
+import Link from 'next/link';
 
 const ShowVideo = ({ id }: { id?: string }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,14 +29,14 @@ const ShowVideo = ({ id }: { id?: string }) => {
         {/* Left: Enhanced Text Content */}
         <div className="space-y-8 z-10 relative">
           {/* Badge with animation */}
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-2 rounded-full text-sm font-medium w-max shadow-lg shadow-red-500/20 animate-pulse">
+          {/* <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-1 rounded-full text-sm font-medium w-max shadow-lg shadow-red-500/20 animate-pulse">
             <Sparkles className="w-4 h-4" />
-            AI Masterclass Preview
-          </div>
+            <span>AI Masterclass Preview</span>
+          </div> */}
 
           {/* Heading with gradient */}
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-            Experience the Future of Learning with AI
+            Discover Techno Billion Ai at a Glance
           </h2>
 
           {/* Enhanced Subheading */}
@@ -44,7 +45,7 @@ const ShowVideo = ({ id }: { id?: string }) => {
           </p>
 
           {/* Stats section */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 py-6 max-w-md">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 py-6 max-w-md">
             <div className="flex flex-col">
               <div className="flex items-center gap-2 text-red-400">
                 <Users className="w-5 h-5" />
@@ -66,13 +67,13 @@ const ShowVideo = ({ id }: { id?: string }) => {
               </div>
               <p className="text-sm text-white/60">Student Rating</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Enhanced CTA */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-red-500 to-red-600 px-8 py-4 font-bold text-white transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-red-500/30">
+            <Link href="https://www.technobillion.ai/events-1" target='_blank' className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-red-500 to-red-600 px-8 py-4 font-bold text-white transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg hover:shadow-red-500/30">
               <span className="relative flex items-center gap-2">
-                Reserve Your Seat Now
+                Upcoming Events
                 <svg
                   className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                   fill="none"
@@ -83,10 +84,10 @@ const ShowVideo = ({ id }: { id?: string }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
               </span>
-            </button>
-            <button className="inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold text-white border border-white/20 rounded-lg hover:bg-white/10 transition-all duration-300">
+            </Link>
+            {/* <button className="inline-flex items-center justify-center gap-2 px-6 py-4 font-semibold text-white border border-white/20 rounded-lg hover:bg-white/10 transition-all duration-300">
               View Curriculum
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -120,7 +121,7 @@ const ShowVideo = ({ id }: { id?: string }) => {
             )}
             {isPlaying && (
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white font-medium pointer-events-none">
-                Watch Demo Session: "Building AI Skills for Tomorrow's Workplace"
+                Unlock Your AI Potential for the Future Workplace
               </div>
             )}
           </div>

@@ -23,6 +23,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import Link from 'next/link';
 
 const ChooseUs = ({ id }: { id?: string }) => {
   useEffect(() => {
@@ -137,10 +138,10 @@ const ChooseUs = ({ id }: { id?: string }) => {
             <div>
               <div className="bg-gradient-to-r from-red-600 to-red-500 text-white rounded-xl p-5 mb-6 shadow-md">
                 <h3 className="text-lg font-semibold">Fundamentals of AI</h3>
-                <p className="text-sm mt-1 opacity-90">Join now for an extra discount.</p>
-                <button className="mt-4 px-4 py-2 bg-white text-red-600 font-semibold rounded-md text-sm hover:bg-gray-100 transition">
+                <p className="text-sm mt-1 mb-2 opacity-90">Join now for an extra discount.</p>
+                <Link href="/curriculms.pdf" target='_blank' download className="mt-4 px-4 py-2 bg-white text-red-600 font-semibold rounded-md text-sm hover:bg-gray-100 transition">
                   See curriculum
-                </button>
+                </Link>
               </div>
 
               <h4 className="text-base sm:text-lg font-semibold mb-2">
@@ -151,7 +152,7 @@ const ChooseUs = ({ id }: { id?: string }) => {
               </p>
 
               <div className="flex items-center space-x-2 mb-5">
-                <AvatarCircles numPeople={220} avatarUrls={dummyAvatars.slice(0, 5)} />
+                <AvatarCircles numPeople={10} avatarUrls={dummyAvatars.slice(0, 5)} />
               </div>
 
               <ul className="text-sm space-y-3 text-gray-200">
@@ -178,12 +179,12 @@ const ChooseUs = ({ id }: { id?: string }) => {
               </ul>
             </div>
 
-            <button
-              className="mt-6 w-full py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transform hover:scale-105 transition shadow-md"
+            <Link href="https://www.technobillion.ai/career" target='_blank'
+              className="mt-6 w-full py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transform hover:scale-105 transition shadow-md flex items-center justify-center text-center"
               data-aos="zoom-in"
             >
               Enroll now
-            </button>
+            </Link>
           </div>
 
           <div

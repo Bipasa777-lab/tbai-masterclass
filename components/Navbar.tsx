@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 
-const navItems = ['Overview', 'Features', 'Demo', 'Curriculum', 'Tools', 'Instructor', 'Community']
+const navItems = ['Overview', 'Features', 'Curriculum', 'Tools', 'Instructor', 'Community']
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -80,9 +80,9 @@ export default function Navbar() {
 
         {/* CTA Button (Desktop) */}
         <div className="hidden md:block">
-          <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-full px-6 py-1.5 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-red-700/20 border border-red-600/20">
+          <Link href="https://www.technobillion.ai/career" target='_blank' className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-full px-6 py-1.5 text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-red-700/20 border border-red-600/20">
             Enroll now
-          </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu */}

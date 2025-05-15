@@ -9,6 +9,7 @@ import {
   Mail,
   GraduationCap,
   Star,
+  LandmarkIcon
 } from 'lucide-react';
 
 const dummyAvatars = [
@@ -55,26 +56,26 @@ const Footer = () => {
                   />
                 ))}
                 <div className="flex items-center justify-center w-10 h-10 bg-white text-black text-sm font-semibold rounded-full border-2 border-black">
-                  4k+
+                  15k+
                 </div>
               </div>
 
               <div className="flex items-center space-x-2">
                 
-                <span className="text-sm text-gray-400">Join 4000+ Students</span>
+                <span className="text-sm text-gray-400">Join 15000+ Students</span>
               </div>
             </div>
 
             {/* Educore Info */}
             <div className="space-y-1">
               <div className="flex items-center text-2xl font-bold text-white">
-                <GraduationCap className="w-6 h-6 mr-2" />
-                Educore
+                <LandmarkIcon className="w-6 h-6 mr-2" />
+                Techno Billion Ai
               </div>
               <p className="text-gray-300 text-sm">
-                Here’s everything you need to know before you start your journey with Educore.
+                Here’s everything you need to know before you start your journey with Techno Billion Ai.
               </p>
-              <p className="text-white font-medium">Instructor</p>
+              {/* <p className="text-white font-medium">Instructor</p> */}
             </div>
           </div>
 
@@ -83,7 +84,7 @@ const Footer = () => {
           <div className="lg:col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-300 hover:text-white">Home</Link></li>
+              <li><Link href="#overview" className="text-gray-300 hover:text-white">Home</Link></li>
               <li><Link href="#features" className="text-gray-300 hover:text-white">Features</Link></li>
               <li><Link href="#curriculum" className="text-gray-300 hover:text-white">Curriculum</Link></li>
               <li><Link href="#tools" className="text-gray-300 hover:text-white">Tools</Link></li>
@@ -96,10 +97,10 @@ const Footer = () => {
           <div className="lg:col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Pages</h3>
             <ul className="space-y-2">
-              <li><Link href="https://www.technobillion.ai/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link href="#faq" className="text-gray-300 hover:text-white">FAQ</Link></li>
-              <li><Link href="https://academy.technobillion.ai/privacy-police" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
-              <li><Link href="https://academy.technobillion.ai/terms-and-condition" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
+              <li><Link href="https://www.technobillion.ai/blog" target='_blank' className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link href="#faq"  className="text-gray-300 hover:text-white">FAQ</Link></li>
+              <li><Link href="https://academy.technobillion.ai/privacy-police" target='_blank' className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="https://academy.technobillion.ai/terms-and-condition" target='_blank' className="text-gray-300 hover:text-white">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -107,16 +108,16 @@ const Footer = () => {
           <div className="lg:col-span-3 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex flex-col space-y-3">
-              <Link href="https://x.com/TechnoBillionAI" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="https://x.com/TechnoBillionAI" target='_blank' className="flex items-center text-gray-300 hover:text-white">
                 <Twitter className="w-5 h-5 mr-2" /> Twitter
               </Link>
-              <Link href="https://www.instagram.com/technobillionai/" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="https://www.instagram.com/technobillionai/" target='_blank' className="flex items-center text-gray-300 hover:text-white">
                 <Instagram className="w-5 h-5 mr-2" /> Instagram
               </Link>
-              <Link href="https://www.linkedin.com/company/techno-billion-ai/" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="https://www.linkedin.com/company/techno-billion-ai/" target='_blank' className="flex items-center text-gray-300 hover:text-white">
                 <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
               </Link>
-              <Link href="mailto:empower@technobillionai.com" className="flex items-center text-gray-300 hover:text-white">
+              <Link href="mailto:empower@technobillionai.com"  className="flex items-center text-gray-300 hover:text-white">
                 <Mail className="w-5 h-5 mr-2" /> Email Us
               </Link>
             </div>
@@ -125,7 +126,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} techno billion ai. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Techno Billion Ai. All rights reserved.</p>
         </div>
       </div>
     </footer>

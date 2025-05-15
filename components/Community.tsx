@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Earth, ChevronLeft, ChevronRight } from "lucide-react";
 import { communityMembers } from "@/constant";
+import Link from "next/link";
 
 export default function Community({id}:{id?: string}) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,14 +61,14 @@ export default function Community({id}:{id?: string}) {
     <section id={id} className="w-full px-4 md:px-16 py-16 bg-white dark:bg-slate-900 text-center">
       <div className="max-w-5xl mx-auto space-y-6">
         <h2 className="text-4xl font-bold text-slate-800 dark:text-white">
-          Connect with professionals from 150+ countries
+          Meet the Experts Behind Our AI Program
         </h2>
         <p className="text-slate-600 dark:text-slate-300 text-lg">
-          Join Educore’s global community to build your career in UI/UX with mentorship, skill-building, and networking opportunities.
+          Join TBAI’s global community to build your career in UI/UX with mentorship, skill-building, and networking opportunities.
         </p>
-        <button className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-red-600 text-white dark:bg-white dark:text-black font-medium shadow hover:scale-105 transition">
+        <Link href="https://www.technobillion.ai/" target="_blank" className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-red-600 text-white dark:bg-white dark:text-black font-medium shadow hover:scale-105 transition">
           Join Community <Earth className="w-5 h-5" />
-        </button>
+        </Link>
       </div>
 
       {/* Carousel */}
@@ -77,7 +78,7 @@ export default function Community({id}:{id?: string}) {
         className="relative max-w-6xl mx-auto mt-16"
       >
         <h3 className="text-2xl font-semibold mb-8 text-slate-800 dark:text-white">
-          Meet Our Global Community
+         Get to Know Our AI Mentors
         </h3>
 
         <button

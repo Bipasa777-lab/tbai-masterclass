@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { AvatarCircles } from './magicui/avatar-circles';
 import { dummyAvatars } from '@/constant';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const HeroSection = ({ id }: { id?: string }) => {
   return (
@@ -49,9 +50,9 @@ const HeroSection = ({ id }: { id?: string }) => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap items-center justify-center lg:justify-start mb-8 gap-4 sm:gap-6"
           >
-            <AvatarCircles numPeople={210} avatarUrls={dummyAvatars} />
+            <AvatarCircles numPeople={10} avatarUrls={dummyAvatars} />
             <div className="flex flex-col items-start text-center sm:text-left">
-              <span className="text-white font-medium text-sm sm:text-base">Join 4000 Students</span>
+              <span className="text-white font-medium text-sm sm:text-base">Join 10k Students</span>
               <span className="text-xs sm:text-sm text-gray-200">⭐⭐⭐⭐⭐ (4.9/5 avg rating)</span>
             </div>
           </motion.div>
@@ -63,15 +64,14 @@ const HeroSection = ({ id }: { id?: string }) => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
           >
-            <Button className="w-full sm:w-auto bg-black text-white hover:bg-gray-900 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-base font-medium px-6 py-3 h-auto">
+            <Link href="https://www.technobillion.ai/career" target='_blank' className="w-full sm:w-auto bg-black text-white hover:bg-gray-900 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-base font-medium px-6 py-3 h-auto rounded-md">
               Enroll Now
-            </Button>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto bg-white text-black border border-white/20 hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-base font-medium px-6 py-3 h-auto"
+            </Link>
+            <Link href="/brochure.pdf" target='_blank' download
+              className="w-full rounded-md sm:w-auto bg-white text-black border border-white/20 hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 text-base font-medium px-6 py-3 h-auto"
             >
               Download Brochure
-            </Button>
+            </Link>
           </motion.div>
 
           {/* Feature Tags */}
