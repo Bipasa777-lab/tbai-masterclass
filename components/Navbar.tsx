@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 
-const navItems = ['Overview','Features','Demo', 'Curriculum', 'Tools', 'Instructor','Community',]
+const navItems = ['Overview', 'Features', 'Demo', 'Curriculum', 'Tools', 'Instructor', 'Community']
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -17,13 +17,25 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
 
-      const scrollPosition = window.scrollY + 100
-      for (let i = navItems.length - 1; i >= 0; i--) {
-        const section = document.getElementById(navItems[i].toLowerCase())
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].toLowerCase())
-          break
-        }
+      const sections = navItems
+        .map((item) => {
+          const el = document.getElementById(item.toLowerCase())
+          if (!el) return null
+
+          const rect = el.getBoundingClientRect()
+          return { id: item.toLowerCase(), top: rect.top }
+        })
+        .filter(Boolean) as { id: string; top: number }[]
+
+      const inView = sections.find((section) => section.top >= 0 && section.top <= window.innerHeight / 2)
+
+      if (inView) {
+        setActiveSection(inView.id)
+      } else {
+        const closest = sections.reduce((prev, curr) =>
+          Math.abs(curr.top) < Math.abs(prev.top) ? curr : prev
+        )
+        setActiveSection(closest.id)
       }
     }
 
@@ -45,13 +57,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center transition-opacity hover:opacity-80">
-          <Image
-            src="/assets/logo_text.svg"
-            alt="Techno Billion AI"
-            width={180}
-            height={40}
-            priority
-          />
+          <Image src="/assets/logo_text.svg" alt="Techno Billion AI" width={180} height={40} priority />
         </Link>
 
         {/* Desktop Navigation */}
@@ -99,13 +105,7 @@ export default function Navbar() {
                 {/* Mobile Logo */}
                 <div className="flex justify-between items-center p-6 border-b border-red-900/20">
                   <Link href="/" className="flex items-center">
-                    <Image
-                      src="/assets/logo_text.svg"
-                      alt="Techno Billion AI"
-                      width={140}
-                      height={30}
-                      priority
-                    />
+                    <Image src="/assets/logo_text.svg" alt="Techno Billion AI" width={140} height={30} priority />
                   </Link>
                 </div>
 
